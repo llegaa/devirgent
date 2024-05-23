@@ -13,7 +13,7 @@ export function CreateArticle() {
     const [contentValue, setContentValue] = useState("")
     const dispatch = useDispatch()
     const navigation = useNavigate()
-    const send = (e: FocusEvent) => {
+    const send = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (titleValue.length === 0) {
             setValidation(prevState => ({...prevState, title: true}))
