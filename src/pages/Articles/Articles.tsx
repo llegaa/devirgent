@@ -16,10 +16,11 @@ export function Articles() {
         const newMass = articles.filter((el) => el.title.toLowerCase().includes(searchValue.toLowerCase()));
         setData(newMass);
     }, [searchValue, articles])
+    useEffect(()=>{console.log(data.length)},[searchValue])
     return (
         <div className={style.container}>
             {article!==null && <Article onClick={()=>setArticle(null)} id={article}/>}
-            {data.map((el) => {
+            {data.length===0 ? <div className={style.title}>Нет статей</div> : data.map((el) => {
                 if (el.title.length > 19) return <ArticleCard articlesCount={articlesCount} contentLength={contentLength} key={el.id} onClick={()=>setArticle(el.id)} article={{...el, title: el.title.slice(0, 19) + "..."}}/>;
                 return <ArticleCard articlesCount={articlesCount} contentLength={contentLength} key={el.id} onClick={()=>setArticle(el.id)} article={{...el}}/>;
             })}
