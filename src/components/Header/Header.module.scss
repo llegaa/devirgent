@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: black;
+  gap: 30px;
+  img {
+    height: 50px;
+  }
+  input {
+    flex-grow: 1;
+    height: 30px;
+    border-radius: 30px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+  input:focus{
+    outline: none;
+  }
+  a {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}

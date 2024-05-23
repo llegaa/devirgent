@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 0px #1200301A;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.title {
+  color: #4914bd;
+  font-size: 24px;
+  font-weight: 800;
+}
+.text {
+  font-size: 14px;
+}
+.table {
+  border-top: 1px solid #d6d6d6;
+  th {
+    text-align: center;
+    font-size: 12px;
+  }
+  tr {
+    text-align: center;
+    font-size: 18px;
+  }
+}
