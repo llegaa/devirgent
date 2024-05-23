@@ -31,7 +31,7 @@ export function Article({ id, onClick }: ArticleProps) {
             setCommentValue("")
         }
     };
-    const sentCommentEnter = (e: KeyboardEvent) => {
+    const sentCommentEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if(e.key==="Enter"){
             if (data && commentValue) {
                 dispatch(articlesActions.addComment({ id: data.id, value: commentValue }))
